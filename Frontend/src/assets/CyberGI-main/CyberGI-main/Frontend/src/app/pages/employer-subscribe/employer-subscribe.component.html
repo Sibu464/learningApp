@@ -1,0 +1,45 @@
+
+<div class="bg-white w-full ">
+    <div class="min-h-screen flex flex-col items-center bg-cover h-full bg-center w-full">
+        <div class=" flex flex-row w-full  justify-end">
+       
+          
+        </div>
+    
+        <div class=" top-text flex flex-row justify-start ">
+        <h2 class="text-l md:text-2xl font-semibold  text-black">All modules({{totalModules}})</h2>
+
+        </div>
+        <div  class=" cont1 h-full   px-4 md:px-6 lg:px-8 border border-solid border-black flex flex-col items-center">
+    
+
+                <div *ngFor="let data of myDataList"  style="width:100%; box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.5);" class=" h-24  card card-side bg-white shadow-xl mt-6 mb-6 border border-solid">
+                    <figure class="picture">
+                      <img
+                        src={{data.picture}}
+                        alt="No image to show"/>
+                    </figure>
+                    <div  class="card-body ">
+                      <h2 class="card-title">{{data.name}}</h2>
+                     
+                      <div class="card-actions justify-end ">
+                        <p class="mod-description">{{data.description}}</p>
+                      <button *ngIf="checkSub(data.id);" class="btn1" style="background-color: #0096C7; color: #ffffff; border: none; padding: 8px 16px; border-radius: 15px;">subscribed</button>
+
+                        <button *ngIf="!checkSub(data.id); " (click)="subscribeToMod(data.id)" class="btn1">subscribe</button>
+                      </div>
+                    </div>
+                    
+                  </div>
+
+               
+                 
+
+                 
+
+               
+     
+        </div>
+    </div>
+  </div>
+  

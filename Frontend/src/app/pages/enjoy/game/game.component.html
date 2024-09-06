@@ -1,0 +1,33 @@
+<!-- <div *ngIf="userName" class="flex flex-col lg:flex-row h-screen bg-gray-900 text-white p-4 bg-quiz-bg bg-cover bg-center">
+    <div *ngIf="questions.length === 0" class="flex items-center justify-center w-full h-full bg-gray-900 bg-opacity-50">
+      <h2 class="text-4xl">Loading...</h2>
+    </div>
+    <div *ngIf="questions.length > 0" class="flex flex-col lg:w-9/12 h-full bg-gray-900 bg-opacity-50">
+      <div *ngIf="gameOver" class="w-full text-center">
+        <h1 class="text-4xl">Game over! <br /> <span class="text-5xl">{{ userName }}</span> earned: ★ {{ earn }} in total!</h1>
+      </div>
+      <div *ngIf="timeOut" class="w-full text-center">
+        <app-timesup [userName]="userName" [questionNumber]="questionNumber" (continueGame)="continueGame()"></app-timesup>
+      </div>
+      <div *ngIf="!gameOver && !timeOut" class="flex flex-col justify-between w-full h-full">
+        <app-questionnaire [question]="questions[currIndex]" (answerSelected)="handleAnswer($event)"></app-questionnaire>
+        <div class="flex justify-around my-4">
+          <app-timer [questionNumber]="questionNumber" (timeOut)="handleTimeOut()"></app-timer>
+          <app-change [changeUsed]="changeUsed" (changeQuestion)="changeQuestion()"></app-change>
+          <app-double-time [doubleTimeUsed]="doubleTimeUsed" [timer]="timer" (extendTime)="extendTime()"></app-double-time>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col items-center lg:w-3/12 p-4">
+      <div *ngIf="showSticker" class="sticker-container">
+        <img [src]="stickerSrc" alt="sticker" class="sticker">
+      </div>
+      <div *ngIf="!showSticker">
+        <div *ngFor="let m of moneyPyramid" [class.money-pyramid__item--active]="questionNumber === m.id" class="money-pyramid__item w-full flex items-center justify-between p-2 m-1 bg-gray-800 rounded">
+          <div class="text-lg">{{ m.id }}</div>
+          <div class="text-lg">★ {{ m.amount }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+   -->

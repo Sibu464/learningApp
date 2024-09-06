@@ -1,0 +1,26 @@
+<div class="p-4 max-w-md mx-auto">
+  <form (ngSubmit)="onUpload()" class="space-y-4">
+    <!-- File Input -->
+    <div>
+      <label for="fileInput" class="block text-sm font-medium text-gray-700"
+        >Choose a file</label
+      >
+      <input
+        type="file"
+        id="fileInput"
+        (change)="onFileSelected($event)"
+        class="mt-1 block w-full text-sm text-gray-500 file:py-2 file:px-4 file:border file:rounded-md
+         file:bg-gray-50 file:text-gray-700 file:border-gray-300 hover:file:bg-gray-100"
+      />
+    </div>
+
+    <!-- Upload Button -->
+    <button
+      type="submit"
+      class="bg-blue-500 text-white px-4 py-2 rounded-md shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2
+       focus:ring-blue-500 focus:ring-offset-2"
+    >
+      Upload
+    </button>
+  </form>
+</div>

@@ -1,0 +1,46 @@
+<div class="relative min-h-screen flex items-center justify-center bg-custom-light-blue quiz-background-image bg-cover bg-center">
+  <div style="align-items: center;" class="container mx-auto px-4 flex flex-col">
+    <div class="bg-transparent p-8 rounded-lg shadow-lg w-full max-w-lg mx-auto">
+      <div class="hexagon-container" *ngIf="!isQuizCompleted">
+        <h2 *ngIf="currentQuestionIndex < 5" class="que">Question {{ currentQuestionIndex + 1 }} of {{ questions.length }}</h2>
+        <h2 *ngIf="currentQuestionIndex > 4" class="que">Question {{ currentQuestionIndex }} of {{ questions.length }}</h2>
+        <p class="que text-center text-xl font-bold mb-4" *ngIf="leftOff < 5">{{ questions[currentQuestionIndex].text }}</p>
+        <p *ngIf="leftOff == 5">Click the button below to reset your progress</p>
+        <button style="background-color: blueviolet;" *ngIf="leftOff == 5" (click)="resetProg()" class="btn">Reset</button>
+      </div>
+
+      <div class="grid gap-4" *ngIf="!isQuizCompleted && leftOff < 5">
+        <button
+          *ngFor="let option of options; let i = index"
+          [attr.data-id]="i"
+          [ngStyle]="{
+            'background-color': buttonColor, 'color': textColor
+          }"
+          (click)="submitAnswer(option, questions[currentQuestionIndex].id, i)"
+          class="hexagon-button"
+          #myButtons>
+          {{ option.optionText }}
+        </button>
+      </div>
+
+      <div *ngIf="showFeedback" class="mt-6 text-center">
+        <p class="text-xl font-semibold text-blue-700">{{ feedback!.feedbackText }}</p>
+      </div>
+
+      <div *ngIf="showNextButton&&currentQuestionIndex<4" class="text-center">
+        <button style="width:150px;margin-top:20px" (click)="nextQuestion()" class="btn btn-primary">Next</button>
+      </div>
+      <div *ngIf="showNextButton&&currentQuestionIndex==4" class="text-center">
+        <button style="width:150px;margin-top:20px" (click)="nextQuestion()" class="btn btn-primary">Finish</button>
+      </div>
+      
+
+      <div *ngIf="isQuizCompleted" class="text-center bg-white okay-btn">
+        <h2 class="text-2xl font-bold mb-4">Quiz Completed!</h2>
+        <p class="text-xl">Your Score: {{ score?.toFixed(0) }}%</p>
+        <button (click)="gotoResults()" class="btn btn-primary ok">OK</button>
+        
+      </div>
+    </div>
+  </div>
+</div>

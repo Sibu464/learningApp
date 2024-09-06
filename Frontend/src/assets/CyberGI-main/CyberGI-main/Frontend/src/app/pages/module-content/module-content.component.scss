@@ -1,0 +1,105 @@
+
+.employee-head {
+    margin-left: 2rem;
+    margin-top: -2rem;
+    font-size: xx-large;
+    font-weight: 400;
+    
+}
+
+.employee-head2 {
+    margin-left: 9rem;
+    margin-top: -6rem;
+    font-size: x-large;
+    font-weight: 400;
+
+}
+.modules-button {
+    max-width: 20%;
+    margin-right: 2rem;
+    background-color: #509CDB;
+    border: 1px solid white;
+    color: white;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border-radius: 5px;
+
+}
+.module-container {
+    border: 1px solid #ccc;
+}
+
+.employee-profile {
+    margin-left: 2rem;
+    height: 6rem;
+    width: 10rem;
+}
+
+.cyber101 {
+    margin-top: 3rem;
+}
+
+.cyber101-text {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-left: 0.99rem;
+}
+
+* {
+    color: black;
+}
+
+.module-container2 {
+    border: 1px solid #ccc;
+    max-width: 80%;
+    padding: 8rem;
+    margin: auto;
+    display: block;
+    margin-top: 1.6rem;
+  
+}
+
+.challenges-btn {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    background-color: #0096C7;
+    color: white;
+    border-radius: 5rem;
+    border: 1px solid ;
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+
+.badge-primary {
+    background-color: #2D88D4;
+    border-color: #2D88D4;
+    
+}
+.woman-chatting {
+    border: 1px solid #ccc;
+    border-radius: 3rem;
+    margin-top: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0.4, 0.1); 
+    padding-left: 1rem;
+    max-width: 85%;
+}
+.notifications-text {
+    margin-left: -0.6rem;
+}
+#default-profile {
+    width: 8rem;
+    margin-left: -1rem;
+}
+
+/* In your component's CSS or SCSS file */
+.custom-confirm-button {
+    background-color: #28a745; /* Custom background color */
+    color: white; /* Custom text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Custom padding */
+    font-size: 16px; /* Custom font size */
+  }
+  

@@ -1,0 +1,54 @@
+<div class="relative min-h-screen bg-white rounded-none mt-0 md:mt-0">
+    <div class="container mx-auto px-4 mt-0">
+            <div class="navbar bg-white mt-0">
+                <div class="navbar-start">
+                    <div class="flex-none">
+                       
+                    </div>
+                </div>
+                
+                <div class="flex-1"></div>           
+            </div>
+            
+            <div class="flex flex-wrap gap-4">
+                <div class="flex-none w-full sm:w-1/2 md:w-1/3">
+                    <div class="card">
+                        <div class="card-header flex justify-between items-center">
+                            <!-- <h2 class="text-lg font-bold employee-head">{{role}}</h2> -->
+                            
+                        </div>
+                        <div class="avatar employee-profile">
+                            <div class=" w-30 rounded-full ">
+                                <img *ngIf="Profile; else defaultAvatar" [src]="Profile" alt="profile.png" class="rounded-full round-profilee" id="profile-user" />
+                                <ng-template #defaultAvatar>
+                                    <img src="assets/images/profile.png" alt="Default Avatar" class="rounded-full" id="profile-user" />
+                                </ng-template>
+                            </div>
+                          </div>
+                    </div>
+
+                    <div class="card-header flex justify-between items-center">
+                        <h2 class="text-lg font-bold employee-head2"> Hello, {{currentUser.username}} 👋🏾 </h2>
+                </div>
+            </div>
+            <div class="card-header flex justify-between items-center cyber101">
+                <h1 class="text-lg font-bold employee-head cyber101-text">Cyber 101 Module</h1>
+                <div class="module-container"></div>
+            </div>  
+    </div>
+
+    <div class="card  image-full7  ">
+        <!-- <figure>
+            <img src="/assets/images/woman talking with chatbot.png" class="woman-chatting" alt="woman talking with chatbot">
+        </figure> -->
+        <video width="640" height="360" autoplay>
+            <source src="https://res.cloudinary.com/dr11kuiex/video/upload/v1720096310/57Q2XPBNJ60KEVUA_eudmtb.mp4" type="video/mp4">
+          </video>
+      </div>
+      <div>
+        <button class="btn btn-active btn-primary challenges-btn" (click)="navigateToLearn()">LEARN MORE</button>
+        <button class="btn btn-active btn-primary challenges-btn" (click)="navigateToChallengesIntro('/intro-challenge')">CHALLENGES</button>
+       
+      </div>
+   
+</div>

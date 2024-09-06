@@ -1,0 +1,67 @@
+<div class="bg-white">
+    <div class="min-h-screen flex flex-col items-center bg-cover bg-center bg-custom" >
+        <!-- User Profile Section -->
+        <div class="w-full max-w-4xl flex flex-col md:flex-row items-center justify-center px-4 md:px-6 lg:px-8">
+            <div class="bg-white card card-side bg-base-100 shadow-xl rounded-xl w-full md:w-3/4 lg:w-2/3 flex mt-10" >
+                <figure class="w-24 md:w-32 lg:w-40 mb-5" id="homepage-">
+                    <img *ngIf="Profile; else defaultAvatar" [src]="Profile" alt="profile.png" class="rounded-full" id="profile-user" />
+                    <ng-template #defaultAvatar>
+                        <img src="assets/images/profile.png" alt="Default Avatar" class="rounded-full" id="profile-user" />
+                    </ng-template>
+                </figure>
+                <div class="card-body p-4 md:p-6" id="homepage-">
+                    <h2 class="card-title text-xl md:text-2xl text-black">Welcome, {{currentUser.username}}</h2>
+                    <p>
+                        <progress class="progress w-full md:w-56" value={{progValue}} max={{questions.length-1}}></progress>
+                        <!-- {{progBar}} -->
+                        <!-- {{progBar}} -->
+                    </p>
+                    <div class="card-actions justify-end">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Featured Modules Section -->
+    <!-- Featured Modules Section -->
+    <div class="w-full max-w-4xl mt-6 px-4 md:px-6 lg:px-8">
+        <h2 class="text-xl md:text-2xl font-semibold mb-4 text-black">Featured Modules</h2>
+        <div class="carousel w-full">
+            <!--Carousel Item 1-->
+            <div *ngFor="let data of allModules" class="carousel-item w-40 md:w-48 lg:w-56 p-2 flex-shrink-0">
+                <div class="card bg-base-100 rounded-lg shadow-md w-full">
+                    <figure>
+                        <img src={{data.picture}} alt="Cyber101" class="object-cover rounded-t-lg h-20 md:h-24" />
+                    </figure>
+                    <div class="card-body p-2 bg-[#D9D9D9] rounded-b-lg text-center flex flex-col items-center">
+                        <h2 class="card-title text-xs md:text-sm text-black">{{data.name}}</h2>
+                        <p class="text-xs text-black">{{data.description}}</p>
+                        <div class="card-actions mt-2 flex justify-center w-full">
+                            <button (click)="navigateToNextPage(data.name)" class="mt-2 shadow-xl btn btn-primary rounded-full bg-[#0096C7] px-2 py-1 text-white text-xs md:text-xs">Go to module</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+        <!-- My Modules Section -->
+        <div class="w-full max-w-4xl mt-6 px-4 md:px-6 lg:px-8">
+            <h2 class="text-xl md:text-2xl font-semibold mb-4 text-black">My Modules</h2>
+            <div 
+              class="scrollable h-52 w-full md:w-52 bg-white rounded-2xl flex items-center justify-center"
+              [ngClass]="{'border-2 border-black border-dashed': myModules.length === 0}"
+            >
+              <!-- Content inside the container -->
+              <div *ngFor="let item of myModules" class="card-settings card bg-[#0096C7] text-white w-96">
+                <div (click)="navigateToNextPage(item.module.name)" class="card-body">
+                  <h2 class="card-title">{{item.module.name}}</h2>
+                  <p>{{item.module.description}}</p>
+                  <div class="card-actions justify-end"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+

@@ -1,0 +1,12 @@
+
+<div style="height:577px;margin-left:2px;margin-right: 2px;" class="flashcard" (click)="toggleFlip()">
+    <div class="flashcard-inner" [class.flipped]="isFlipped">
+      <div style="background-color: rgb(207, 174, 240);" class="flashcard-front">
+        <ng-content select=".front"></ng-content>
+      </div>
+      <div class="flashcard-back">
+        <ng-content select=".back"></ng-content>
+      </div>
+    </div>
+  </div>
+  

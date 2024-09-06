@@ -1,0 +1,137 @@
+.quiz-background-image {
+  background-image: url('/assets/images/background.jpg');
+  
+}
+
+
+  .hexagon-button {
+      position: relative;
+      display: inline-block;
+      padding: 10px 30px;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      background-color: #e5c546;
+      border: transparent;
+      border-radius: 8px;
+      // clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%);
+      transition: all 0.3s ease;
+    }
+  
+  
+    .hexagon-button:hover {
+      background-color: #4338ca;
+      border-color: transparent;
+    }
+  
+    .bg-custom-light-blue {
+      background-color: #e0f7fa;
+    }
+  
+    .hexagon-container {
+      z-index: 1;
+      position: relative;
+      padding: 20px;
+     
+      background-color: rgba(75, 71, 71, 0.1); 
+      // clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%);
+      text-align: center;
+      border: transparent;
+      color: rgb(0, 0, 0);
+      margin-bottom: 1rem;
+    }
+  
+    .btn-primary {
+      background-color: #0096C7;
+      border-color: #0096C7;
+      color: white;
+    }
+  
+    .btn-primary:hover {
+      background-color: #0077A5;
+      border-color: #0077A5;
+    }
+  
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .cards .red {
+      background-color: #f43f5e;
+    }
+  
+    .cards .blue {
+      background-color: #3b82f6;
+    }
+  
+    .cards .green {
+      background-color: #22c55e;
+    }
+  
+    .cards .yellow {
+      background-color: yellow;
+    }
+  
+    .cards .card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      height: 100px;
+      width: 250px;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+      transition: 400ms;
+    }
+  
+    .cards .card p.tip {
+      font-size: 1em;
+      font-weight: 700;
+    }
+  
+    .cards .card p.second-text {
+      font-size: .7em;
+    }
+  
+    .cards .card:hover {
+      transform: scale(1.1, 1.1);
+    }
+  
+    .cards:hover > .card:not(:hover) {
+      filter: blur(10px);
+      transform: scale(0.9, 0.9);
+    }
+
+    .hexagon-button.correct {
+      border-color: green;
+      box-shadow: 0 0 15px 3px rgba(0, 255, 0, 0.7);
+    }
+    
+    .hexagon-button.incorrect {
+      border-color: red;
+      box-shadow: 0 0 15px 3px rgba(255, 0, 0, 0.7);
+    }
+    .que{
+      z-index: 99999;
+    ;
+      color: #224d2a;
+      
+    }
+
+    .okay-btn {
+      padding: 3rem;
+      border-radius: 1rem;
+      box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+      background: linear-gradient(109.5deg, rgb(13, 11, 136) 9.4%, rgb(86, 255, 248) 78.4%);
+      color: white;
+    }
+
+    .ok {
+      margin-top: 2rem;
+    }
+    

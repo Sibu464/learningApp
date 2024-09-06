@@ -1,0 +1,87 @@
+
+<ngx-spinner
+bdColor = "rgba(0,0,0,0.7)"
+  template="<img src='..\assets\images\load-142.gif' />"
+  
+>
+<p style="color: white" > Loading... </p>
+</ngx-spinner>
+<div class="min-h-screen flex items-center justify-center bg-gray-200">
+  <div class="bg-white shadow-md rounded-lg px-8 pt-6 pb-8 mb-4 max-w-xs sm:max-w-md w-full">
+    <div class="flex justify-center">
+      <img (click)="onLogoClick()" src="assets/images/logo.jpg" alt="Logo" class="h-16 w-16 mb-4">
+    </div>
+    <form
+      *ngIf="!isLoggedIn"
+      name="form"
+      (ngSubmit)="f.form.valid && onSubmit()"
+      #f="ngForm"
+      class="space-y-4"
+      novalidate
+    >
+      <div class="form-control">
+        <label for="username" class="label text-black">
+          <span class="label-text">Username</span>
+        </label>
+        <input
+          type="text"
+          name="username"
+          [(ngModel)]="form.username"
+          required
+          #username="ngModel"
+          [ngClass]="{ 'border-red-500': f.submitted && username.errors }"
+          class="input input-bordered border-black bg-white text-black w-full px-3 py-2 leading-tight focus:outline-none focus:shadow-outline"
+          placeholder="Enter your username"
+        />
+        <div *ngIf="username.errors && f.submitted" class="text-red-500 text-xs italic mt-1">
+          Username is required!
+        </div>
+      </div>
+
+      <div class="form-control">
+        <label for="password" class="label text-black">
+          <span class="label-text">Password</span>
+        </label>
+        <input
+          type="password"
+          name="password"
+          [(ngModel)]="form.password"
+          required
+          minlength="6"
+          #password="ngModel"
+          [ngClass]="{ 'border-red-500': f.submitted && password.errors }"
+          class="input input-bordered border-black bg-white text-black w-full px-3 py-2 leading-tight focus:outline-none focus:shadow-outline"
+          placeholder="Enter your password"
+        />
+        <div *ngIf="password.errors && f.submitted" class="text-red-500 text-xs italic mt-1">
+          <div *ngIf="password.errors['required']">Password is required</div>
+          <div *ngIf="password.errors['minlength']">Password must be at least 6 characters</div>
+        </div>
+      </div>
+
+
+
+      <div class="form-control mt-4">
+        <button class="btn w-full" style="background-color: #0096C7; color: white; border: 2px solid transparent;">Sign In</button>
+      </div>
+
+      <div class="text-center mt-4">
+        <p class="text-black">
+          Don't have an account? <a routerLink="/signup" class="font-bold underline">Sign up here!</a>
+        </p>
+      </div>
+
+      <div class="mb-4">
+        <div
+          *ngIf="f.submitted && isLoginFailed"
+          class="text-red-500 text-xs italic mt-1"
+        >
+          Login failed: {{ errorMessage }}
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+

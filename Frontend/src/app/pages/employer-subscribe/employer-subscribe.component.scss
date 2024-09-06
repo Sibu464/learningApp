@@ -1,0 +1,95 @@
+.card-body{
+
+    padding-top: 7px;
+    padding-left: 15px;
+ padding-bottom:12px;
+    padding-right: 12px;
+}
+.picture{
+    width:5rem;
+    height:5rem;
+    margin-top: 8px;
+    margin-left: 8px;
+    border-radius: 12%;
+}
+.top-text{
+    margin-left:0%;
+    margin-bottom:0px;
+    margin-top:100px;
+    width:50%
+}
+.cont1{
+    margin-top: 27px;
+    margin-left: 12px;
+    margin-right: 12px;
+    border-radius: 14px;
+    width:50%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+    
+}
+.mod-description{
+    width:26px;
+    height: 33px;
+    overflow:auto;
+    line-height: 0.92;
+}
+
+.card-actions{
+
+    
+    height:20%;
+  
+}
+
+.btn1 {
+    color: black;
+    border: solid;
+    border-width: 1px;
+    border-radius: 12px;
+    padding-left: 8px; /* Adjusted padding */
+    padding-right: 8px; /* Adjusted padding */
+    padding-top: 4px; /* Reduced padding */
+    padding-bottom: 4px; /* Reduced padding */
+    margin-top: 14px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4); 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 14px; /* Optional: adjust font size if needed */
+    
+}
+
+.text-l{
+    text-align: left;
+}
+.btn-mod{
+    background-color: rgb(31, 143, 198);
+    color:white;
+    height:2rem;
+    width:8rem;
+    border-radius: 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  
+    
+}
+.moduleName{
+    color:black;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+@media screen and (max-width: 768px) {
+    /* CSS rules for screens narrower than 768px */
+    .cont1{
+        margin-left: 12px;
+        margin-right: 12px;
+        border-radius: 10px;
+        width:88%;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4); 
+        
+    }
+    .top-text{
+        margin-left:5px;
+        margin-bottom:0px;
+        margin-top:25px;
+        width: 88%
+      
+    }
+}

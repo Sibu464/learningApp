@@ -1,0 +1,67 @@
+<div class="h-full w-screen flex flex-col p-4 relative bg-white">
+  <form class="flex flex-col mt-12 mb-8" (ngSubmit)="onUpload()">
+
+    <!-- Profile Image with Hover Effect -->
+    <div class="relative mx-auto">
+      <input
+        type="file"
+        id="fileInput"
+        (change)="onFileSelected($event)"
+        class="hidden"
+      />
+      <div class="group relative w-32 h-32">
+        <!-- <img
+          class="w-32 h-32 object-cover rounded-full border-2 border-blue-600 cursor-pointer"
+          [src]="profileImageUrl"
+          alt="Profile Image"
+          (click)="triggerFileInput()"
+          
+        /> -->
+        <img *ngIf="Profile; else defaultAvatar" [src]="Profile" alt="profile.png" class="rounded-full" id="profile-user" />
+        <ng-template #defaultAvatar>
+            <img src="assets/images/profile.png" alt="Default Avatar" class="rounded-full" id="profile-user"   (click)="triggerFileInput()"/>
+        </ng-template>
+        
+        <!-- Transparent overlay that appears on hover -->
+        <div class="overlay absolute inset-0 bg-black bg-opacity-50 rounded-full opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+          <span class="text-white text-sm">Change Image</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Upload Button -->
+    <button
+      type="submit"
+      class="bg-white-500 mt-3 text-black px-4 py-2 rounded-md shadow-sm hover:bg-grey-600 focus:outline-none focus:ring-2
+      focus:ring-blue-500 focus:ring-offset-2"
+    >
+      Upload
+    </button>
+  </form>
+
+  <div class="flex flex-col items-center justify-center">
+    <h1 class="text-3xl font-bold mt-1">{{currentUser}}</h1>
+    <!-- <h1 class="text-lg font-thin">Employee</h1> -->
+    <h1 class="text-lg font-thin employee-head">{{role}}</h1>
+  </div>
+
+  <!-- Badges and Completed Modules -->
+  <div class="flex flex-col mt-8 gap-2">
+    <h4 class="achievements-h1">Achievements</h4>
+    <div *ngFor="let item of [1]">
+      <div
+        class="flex w-full items-center justify-between rounded-full shadow px-8 h-20 border-2 border-slate-50"
+      >
+        <div class="font-semibold text-slate-500">Cyber101</div>
+        <img src="/assets/Badgeblu.png" alt="blue badge">
+      </div>
+    </div>
+
+    <div class="w-full flex justify-center items-center mt-12 gap-4">
+      <!-- <div class="py-2 flex items-center flex-col justify-center gap-2 p-3 rounded">
+        <h1>Badges</h1>
+        <img src="/assets/Badgeblu.png" alt="blue badge">
+      </div> -->
+    </div>
+  </div>
+</div>

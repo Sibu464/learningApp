@@ -1,0 +1,29 @@
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<div class=" min-h-screen flex items-center justify-center bg-cover bg-center bg-custom bg-[#0077B6]">
+  <div class=" mb-8 text-center text-white px-4 sm:px-6 lg:px-8 py-16 flex flex-col md:flex-row items-center">
+      <div  class="column-1">
+  <h1 id="text1" >Cyber Security</h1>
+  <h1 id="text1" class="text-2xl">Threats</h1>
+
+  <p id="text2">Choose a Module:</p>
+  <div   class="flex w-full flex-col lg:flex-row">
+
+   
+    <div *ngFor="let data of myModules" [@jiggle] class="item">
+
+      <button  (click)="navigateToNextPage(data.id.toString(),data.module.name)" class="game-button">{{data.module.name}}</button>
+      <audio id="audioPlayer">
+        <source src="/assets/audio/button_click.wav" type="audio/mpeg">
+
+        Your browser does not support the audio element.
+      </audio>
+
+    </div>
+  </div>
+</div>
+  </div>
+</div>

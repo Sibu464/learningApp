@@ -1,0 +1,154 @@
+.employee-profile {
+  margin-top: 1rem;
+  margin-left: 7rem;
+}
+
+.employee-image {
+  width: 10rem;
+  align-items: center;
+}
+.edit-image {
+  margin-top: 4rem;
+  margin-bottom: 0rem;
+  margin-left: 7rem;
+  align-items: center;
+  font-size: 0.8rem;
+}
+.name-employee {
+  margin-left: 10rem;
+  margin-top: 1rem;
+  color: black;
+  margin-bottom: -1.3rem;
+}
+
+.title-employee {
+  margin-top: -2rem;
+  margin-right: 10rem;
+  align-items: center;
+  display: grid;
+  place-items: center;
+}
+#title-employee {
+  margin-top: 2rem;
+  margin-left: 4rem;
+}
+
+.achievements-btn {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  color: grey;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border: 1px solid gray;
+  padding: 5px 20px;
+  margin-bottom: -1rem;
+  transition: background-color 0.3s, border-color 0.3s;
+  width: 16rem;
+
+}
+.achievements-btn:hover {
+  background-color: silver;
+  border: rgb(205, 202, 202) solid 1px;
+  transition: ease-in-out;
+  
+}
+
+.achievement-heading {
+  color: black;
+  font-weight: 500;
+  font-size: smaller;
+  margin-bottom: -1rem;
+  display: block;
+  margin: auto;
+  align-items: center;
+  align-content: center;
+  margin-top: 1rem;
+}
+
+.acheivements-container {
+  align-items: center;
+  margin-left: 5rem;
+  margin-top: 3rem;
+}
+
+.number-of-completed-modules {
+  margin-left: 1.5rem;
+}
+
+#title-employee {
+  color: silver;
+  align-items: center;
+  margin-left: 9.5rem;
+}
+
+.badge-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+  margin-left: -1rem;
+}
+.contain-badge {
+  margin-right: 6rem;
+}
+.containe-modules-nr {
+  margin-right: 2rem;
+  padding-left: 2rem;
+}
+
+.side-icons {
+  margin-left: 15rem;
+  margin-top: -5rem;
+  margin-bottom: 4rem;
+}
+
+.side-icons1 {
+  margin-left: 15rem;
+  margin-top: -8rem;
+  
+}
+#badge-spacing-icon {
+  margin-left: 2rem;
+  
+}
+
+#message-icon {
+  width: 16px;
+  height: 16px;
+}
+
+
+#username1 {
+  margin-top: 3rem;
+  align-items: center;
+  margin-left: 0rem;
+}
+#upload-image-btn {
+  margin-left: 8rem;
+}
+
+.group {
+  position: relative;
+}
+
+.group:hover .opacity-0 {
+  opacity: 1;
+}
+
+.transition-opacity {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.bg-opacity-50 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.group .overlay {
+  pointer-events: none; /* Allow clicks to pass through the overlay */
+}
+.achievements-h1 {
+margin-left: 1rem;
+}

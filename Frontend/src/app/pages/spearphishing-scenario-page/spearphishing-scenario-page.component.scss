@@ -1,0 +1,66 @@
+.phishing-heading {
+  color: white;
+}
+.start-button {
+  border-radius: 2rem;
+  max-width: 100%;
+  background-color: rgb(223, 219, 219);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border: 1px solid grey;
+}
+
+.sign-out-link1 {
+  margin-left: 15rem;
+}
+#background-heading {
+    font-size: 2rem;
+    margin-top: -15rem;
+}
+
+.container-1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+body {
+  height: 100%; 
+  overflow: hidden; 
+}
+
+.hero {
+  height: 100vh; 
+  position: relative; 
+  overflow: hidden; 
+  
+}
+
+body {
+  height: 100%; 
+  overflow: hidden; 
+}
+
+.hero {
+  height: 100vh; 
+  position: relative; 
+  overflow: hidden; 
+  
+}
+
+#sprite {
+  position: absolute; 
+  bottom: 0; /* Align to the bottom of the hero container */
+  right: 0; /* Align to the right side of the hero container */
+  margin: 0; /* Remove margins to control exact positioning */
+  z-index: 10; /* Ensure the sprite is on top of other content */
+  max-width: 100%; /* Ensure the sprite does not overflow */
+  height: auto; /* Maintain aspect ratio */
+  position: absolute; 
+  bottom: 0; /* Align to the bottom of the hero container */
+  right: 0; /* Align to the right side of the hero container */
+  margin: 0; /* Remove margins to control exact positioning */
+  z-index: 10; /* Ensure the sprite is on top of other content */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 12.3rem;
+  margin-bottom: 4rem;
+}

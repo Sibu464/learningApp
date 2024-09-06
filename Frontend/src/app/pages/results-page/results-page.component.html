@@ -1,0 +1,54 @@
+<div class="min-h-screen flex items-center justify-center bg-cover bg-center bg-custom bg-[#0077B6]">
+  <div class="text-center text-white px-4 sm:px-6 lg:px-8 py-16 flex flex-col md:flex-row items-center">
+      <div class="column-1">
+        <div class="avatar" style="display: flex; justify-content: center; position: fixed; top: 20px; left: 50%; transform: translateX(-50%);">
+          <div class="ring-primary ring-offset-base-100 w-24 rounded-full ring ring-offset-2 round-profile">
+            <img *ngIf="Profile; else defaultAvatar" [src]="Profile" alt="profile.png" class="rounded-full" id="profile-user" />
+            <ng-template #defaultAvatar>
+                <img src="assets/images/profile.png" alt="Default Avatar" class="rounded-full" id="profile-user" />
+            </ng-template>
+          </div>
+        </div>
+        
+
+          <div class="emoji-contain"  style="text-align: right; color: wheat; font-size: 24px; font-weight: bold; margin-right: 50px;">
+              <h1 *ngIf="score>=60"><strong>Congratulations!</strong><span class="emoji">🎉</span></h1>
+              <h1 *ngIf="score<60"><strong>You scored < 60%</strong><span class="emoji"></span></h1>
+              <div style="text-align: center;">
+                  
+              </div>
+          </div>
+
+          <div class="avatar placeholder">
+              <div class="bg-neutral text-neutral-content w-24 rounded-full mt-10 w-40" style="background-color: wheat;">
+                  <span *ngIf="score>=60" class="emoji" style="font-size: 6rem;">🏆</span>
+                  <span *ngIf="score<60" class="emoji" style="font-size: 6rem;">👎🏽</span>
+              </div>
+          </div>
+
+          <div>
+              <p style="margin-top: 20px; color: wheat; font-weight: bold; font-size: 24px;">
+                <strong *ngIf="score>=60">GREAT WORK</strong> <span *ngIf="score>=60" class="emoji">🎉🎉</span>
+                <strong *ngIf="score<60">YOU CAN DO BETTER, <br> TRY AGAIN. 🤗</strong> 
+              </p>
+          </div>
+
+
+          <div class="mt-8">
+              <!-- <p *ngIf="score>=60" style="color: wheat; font-size: 22px;">You have completed</p>
+              <p *ngIf="score<60" style="color: wheat; font-size: 22px;">retry module quiz</p> -->
+           
+              <!-- <p style="color: wheat; font-size: 22px;">Cyber101</p> -->
+              <br>
+              <!-- <p style="color: wheat; font-size: 12px;">Find more challanges below</p> -->
+              <div style="display: flex; justify-content: center; margin-top: 40px;">
+                <button (click)="retryQ()" *ngIf="score<60" class="btn btn-warning reattempt-btn" style="width: 150px; border-radius: 50px; margin-right: 20px;" onclick="this.style.backgroundColor = 'wheat';">Re-Attempt</button>
+              
+                <button *ngIf="score>=60" class="btn btn-secondary" style="width: 150px; border-radius: 50px; background-color: #00B4D8; border: none;" onclick="this.style.backgroundColor = 'wheat';" (click)="gotoHome()">Finish</button>
+              </div>
+              
+
+          </div>
+      </div>
+  </div>
+</div>

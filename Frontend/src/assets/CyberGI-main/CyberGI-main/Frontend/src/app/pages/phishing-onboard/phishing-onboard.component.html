@@ -1,0 +1,52 @@
+<div class="hero-container">
+  <div class="hero-overlay">
+    <div class="phishing-content">
+      <h1 class="phishing-heading">Beware of Spear Phishing!</h1>
+      <p class="introduction-text mb-8">
+        Learn how to recognize and avoid attempts to steal sensitive information!
+      </p>
+      <div class="image-grid">
+        <div class="card" (click)="flipCard(0)">
+          <div class="card-inner" [ngClass]="{ 'flipped': flippedStates[0] }">
+            <div class="card-front">
+              <img src="/assets/images/P11.png" alt="Phishing Example 1">
+            </div>
+            <div class="card-back">
+              <p>Do not give out your personal info on unsecured platforms!</p>
+            </div>
+          </div>
+        </div>
+        <div class="card" (click)="flipCard(1)">
+          <div class="card-inner" [ngClass]="{ 'flipped': flippedStates[1] }">
+            <div class="card-front">
+              <img src="/assets/images/gmail 11.png" alt="Phishing Example 2">
+            </div>
+            <div class="card-back">
+              <p>Verify links before clicking.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card" (click)="flipCard(2)">
+          <div class="card-inner" [ngClass]="{ 'flipped': flippedStates[2] }">
+            <div class="card-front">
+              <img src="/assets/images/paypalll.png" alt="Phishing Example 3">
+            </div>
+            <div class="card-back">
+              <p>Never give out your private payment credentials</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- <p class="instructions">
+        <strong>How to Spot Phishing:</strong>
+        <ul>
+          <li>.</li>
+          <li>Look for urgent or threatening language.</li> 
+          <li>Verify links before clicking.</li>
+        </ul>
+      -->
+      <button (click)="funcT()" class="btn start-button mt-8">Start Challenge</button>
+    </div>
+  </div>
+</div>

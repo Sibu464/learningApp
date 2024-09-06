@@ -1,0 +1,215 @@
+<!-- <div class="container mx-auto mt-[1%] w-full justify-center content-center text-center items-center">
+
+  <div (window:resize)="onResize($event)" ([ngClass])="{'isMobile': isMobile}">
+    <div *ngIf="isMobile">
+      I see you're on mobile
+    </div>
+  </div>
+
+  <div class="block animate__animated animate__fadeInUp animate__delay-10s rounded-2xl content-center text-center p-[5%] m-auto bg-[#0000001E] dark:bg-[#FFFFFF1E] w-[400px]">
+    <div class="avatar">
+      <div class="w-40 rounded-full">
+        <img class="content-center" src="https://variety.com/wp-content/uploads/2021/04/Avatar.jpg?w=800" alt="avatar">
+      </div>
+    </div>
+    <h4 class="text-[2em]">Employee</h4>
+    <a href="https://github.com/navitux/">
+      <img class="inline" src="https://img.icons8.com/nolan/48/github.png" alt="github">
+    </a>
+    <a href="mailto:navitux@disroot.org">
+      <img class="inline" src="https://img.icons8.com/nolan/48/1A6DFF/C822FF/email.png" alt="email">
+    </a>
+    <a href="https://masto.nobigtech.es/@navitux">
+      <img class="inline" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADk0lEQVR4nO1ZW4hNURjerg88kFxKePCAXHN5o3gwM/tf+xgyjcvEiwi5a9wTcnlRFC+EpEjGZc75/2OQMCJJ8uSSW6FckkuE3D/94xgzx957Zvbe55xR56tV5+z17/V/37r8a61/W1YeeeSRx3+JilK04hj6iYMpQtjEBgeYcFYMbjHhoRBeMOFNnaLP7ohBtRgcEsJWNph+kjDowmi0zhrxBGGkGOwRwisxQBSFDV4LYS/bGJUx4hWlaMuE3VGR9iyEXdeHo02k5NetQ0shHMk4eZMaEcJh9RmZACYszRZ5+TsSiyIhnxiHbkL4lAMBH6tsdAktQAgbfZx8YcKOOGHEmQK0rxyPjglCARNOudhXJR2MPTsWHdRW32GDndqGT/vrwwswuO8ROd55RQ1YaMEGW+rYbvZqn22M0rY8fNwNRZ5j6OWz0Mr83lURYnCOCef1t59t0mCal58qGz2CCyBM8OiZB+mkKgvRM2EwNV6Evn+exW30FwcDa/8Xoa/apJOCjphudG6+bIwLI2Cmh4B99exiGCaE96m6r0wocWmrROtSc/u9vmPVgRD2u46CjRmBBQhhVWMWFxscTat/7CLgUVo7x9J8bXDzlXSwIoyAtR4jsLKencHNdBsNv3/qjxegq8saut2YzmKDNYEFKFGPRsvr2RHu/SPAxuBacg4Gugh4mOar3GO0l4cRUN6YXTIiAUs8OmtJYAFK1HVeGizIgICFHuF6ThgB87M1AmJjsYeAyYEFsMFsj9C2OGtTyEZhYAEagz16ZWlDAhoq/wgg9xNv0sHwwAISBpOCRqEmCzDuAeN0IToFFiAOxjQmtEUkYJmLn7dWGCSKMKCpxKIsTLgaSgDH0DmnAgwWhhJQI8LgZY4EXI4k3aJn+hyQr9bbXWjyNSNA2J7FKfNBCKsjTXQlDSb6Oib8YINvIYk/0CO6nlqtqKEXcM0Q+Ah4yzG004wdE+YJYZsYVKbSjNfE4EbqtqVH7stMSNZcXgjr9XZ2ktDHyjSYcMKn935mpOeihN5LfacAYabVnIHfGYZrPtPoqWYwrOYMcTCEDT77TKVnQpiliSu/duLF6C4Oiq1cgAllGnUaiErfNSHFhIupxVwhBiwGl2o3RcILK1cQB8UaecLGeyuXYD0j6RcWwvMA5H9q7tRqLp+Z4jaGavzXZFdq2jypzXX+3uR0bVxhg4NiY27SQe9c884jjzzysCLDL+BRoGFhqzDWAAAAAElFTkSuQmCC" alt="mastodon">
+    </a>
+  </div>
+
+  <img class="w-5 rounded-full" src="https://cdn.pixabay.com/photo/2014/03/24/10/46/tux-293844_1280.png" alt="Linux Tux">
+
+
+</div>
+
+
+
+  <div class="gallery p-4 grid gap-4 lg:grid-cols-3 font-sans">
+    <div class="card shadow-xl">
+      <figure class="rounded">
+        <img src="https://unsplash.it/1024/683?image=1067" alt="aerial city">
+      </figure>
+      <div class="justify-end card-body bg-neutral-content">
+        <h2 class="card-title prose lg:prose-xl">Aerial city</h2>
+      </div>
+      <div class="card-actions flex justify-center space-x-2 pb-6">
+        <button class="btn btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          </svg>
+        </button>
+        <button class="btn btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+          </svg>
+        </button>
+        <button class="btn btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14H5.236a2 2 0 01-1.789-2.894l3.5-7A2 2 0 018.736 3h4.018a2 2 0 01.485.06l3.76.94m-7 10v5a2 2 0 002 2h.096c.5 0 .905-.405.905-.904 0-.715.211-1.413.608-2.008L17 13V4m-7 10h2m5-10h2a2 2 0 012 2v6a2 2 0 01-2 2h-2.5" />
+          </svg>
+        </button>
+        <button class="btn btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="card shadow-xl">
+      <figure>
+        <img src="https://unsplash.it/1024/683?image=1079" alt="time lapse fireworks spiral photo">
+      </figure>
+      <div class="justify-end card-body bg-neutral-content">
+        <h2 class="card-title prose lg:prose-xl">Time lapse fireworks spiral photo</h2>
+      </div>
+      <div class="card-actions flex justify-center space-x-2 pb-6">
+        <button class="btn btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          </svg>
+        </button>
+        <button class="btn btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+          </svg>
+        </button>
+        <button class="btn btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14H5.236a2 2 0 01-1.789-2.894l3.5-7A2 2 0 018.736 3h4.018a2 2 0 01.485.06l3.76.94m-7 10v5a2 2 0 002 2h.096c.5 0 .905-.405.905-.904 0-.715.211-1.413.608-2.008L17 13V4m-7 10h2m5-10h2a2 2 0 012 2v6a2 2 0 01-2 2h-2.5" />
+          </svg>
+        </button>
+        <button class="btn btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="card shadow-xl">
+      <figure class="rounded">
+        <img src="https://unsplash.it/1024/683?image=1078" alt="side view of building showing various offices at night">
+      </figure>
+      <div class="justify-end card-body bg-neutral-content">
+        <h2 class="card-title prose lg:prose-xl">Side view of building showing various offices at night</h2>
+      </div>
+      <div class="card-actions flex justify-center space-x-2 pb-6">
+        <button class="btn btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          </svg>
+        </button>
+        <button class="btn btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+          </svg>
+        </button>
+        <button class="btn btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14H5.236a2 2 0 01-1.789-2.894l3.5-7A2 2 0 018.736 3h4.018a2 2 0 01.485.06l3.76.94m-7 10v5a2 2 0 002 2h.096c.5 0 .905-.405.905-.904 0-.715.211-1.413.608-2.008L17 13V4m-7 10h2m5-10h2a2 2 0 012 2v6a2 2 0 01-2 2h-2.5" />
+          </svg>
+        </button>
+        <button class="btn btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="card shadow-xl">
+      <figure class="rounded">
+        <img src="https://unsplash.it/1024/683?image=1072" alt="Rusting truck in field">
+      </figure>
+      <div class="justify-end card-body bg-neutral-content">
+        <h2 class="card-title prose lg:prose-xl">Rusting truck in field</h2>
+      </div>
+      <div class="card-actions flex justify-center space-x-2 pb-6">
+        <button class="btn btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          </svg>
+        </button>
+        <button class="btn btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+          </svg>
+        </button>
+        <button class="btn btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14H5.236a2 2 0 01-1.789-2.894l3.5-7A2 2 0 018.736 3h4.018a2 2 0 01.485.06l3.76.94m-7 10v5a2 2 0 002 2h.096c.5 0 .905-.405.905-.904 0-.715.211-1.413.608-2.008L17 13V4m-7 10h2m5-10h2a2 2 0 012 2v6a2 2 0 01-2 2h-2.5" />
+          </svg>
+        </button>
+        <button class="btn btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="card shadow-xl">
+      <figure class="rounded">
+        <img src="https://unsplash.it/1024/683?image=1074" alt="Lioness staring">
+      </figure>
+      <div class="justify-end card-body bg-neutral-content">
+        <h2 class="card-title prose lg:prose-xl">Lioness staring</h2>
+      </div>
+      <div class="card-actions flex justify-center space-x-2 pb-6">
+        <button class="btn btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          </svg>
+        </button>
+        <button class="btn btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+          </svg>
+        </button>
+        <button class="btn btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14H5.236a2 2 0 01-1.789-2.894l3.5-7A2 2 0 018.736 3h4.018a2 2 0 01.485.06l3.76.94m-7 10v5a2 2 0 002 2h.096c.5 0 .905-.405.905-.904 0-.715.211-1.413.608-2.008L17 13V4m-7 10h2m5-10h2a2 2 0 012 2v6a2 2 0 01-2 2h-2.5" />
+          </svg>
+        </button>
+        <button class="btn btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <div>
+    <div class="flex flex-row">
+        <div class="grid grid-cols-1 gap-3">
+            <div class="p-4 ">
+                <h1 class="font-semibold">Modules</h1>
+                <div class="flex gap-3">
+                    <div onclick="carditem(this)" class="card w-[450px] bg-amber-400 p-5 shadow-xl">
+                        <figure><img class="bg-gray-100 rounded-2xl" src="https://imit.com/wp-content/uploads/2022/09/Spear-Phishing-Attacks.webp" alt="Shoes" /></figure>
+                        <div class="text-center">
+                          <h2 id="card_text" class="font-semibold text-2xl my-3">Spear Phishing</h2>
+                          <p class="text-xl font-normal"><span>Subscribe</span> Introduction to spear Phishing</p>
+                        </div>
+                      </div>
+                      <div onclick="carditem(this)" class="card w-[450px] bg-amber-400 p-5 shadow-xl">
+                        <figure><img class="bg-gray-100 rounded-2xl" src="https://imit.com/wp-content/uploads/2022/09/Spear-Phishing-Attacks.webp" alt="Shoes" /></figure>
+                        <div class="text-center">
+                          <h2 id="card_text" class="font-semibold text-2xl my-3">Spear Phishing</h2>
+                          <p class="text-xl font-normal"><span>Subscribe</span> Introduction to spear Phishing</p>
+                        </div>
+                      </div>
+                </div>
+            </div>
+
+        <div class="w-1/4 mt-10">
+                </div>
+            </div>
+        </div>
+ -->

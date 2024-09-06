@@ -1,0 +1,116 @@
+<ngx-spinner
+bdColor = "rgba(0,0,0,0.7)"
+  template="<img src='..\assets\images\load-142.gif' />"
+  
+>
+<p style="color: white" > Loading... </p>
+</ngx-spinner>
+
+<div class="min-h-screen flex items-center justify-center bg-gray-200">
+  <div class="bg-white shadow-md rounded-lg px-8 pt-6 pb-8 mb-4 max-w-xs sm:max-w-md w-full">
+    <div class="container mx-auto px-4 mt-0">
+      <div class="navbar bg-white mt-0">
+        <div class="navbar-start">
+          <div class="flex-none">
+            
+            <button class="btn btn-square btn-ghost">
+             
+            </button>
+          </div>
+        </div>
+        
+        <div class="flex-1"></div>
+      
+        <div class="navbar-end flex items-center">
+          <button class="butn btn-ghost btn-circle">
+            <div class="indicator">
+             
+            </div>
+          </button>
+          
+        </div>
+      </div>
+      
+      <h2 class="text-center">Add Employee</h2>
+
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="space-y-4" novalidate>
+        <div class="form-control">
+          <label for="username" class="label text-black">
+            <span class="label-text">Username</span>
+          </label>
+          <input
+            type="text"
+            formControlName="username"
+            class="input input-bordered border-black bg-white text-black w-full px-3 py-2 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="Enter your username"
+          />
+          <div *ngIf="signupForm.get('username')?.touched && signupForm.get('username')?.invalid" class="text-red-500 text-xs italic mt-1">
+            <div *ngIf="signupForm.get('username')?.errors?.['required']">Username is required</div>
+            <div *ngIf="signupForm.get('username')?.errors?.['minlength']">Username must be at least 3 characters</div>
+            <div *ngIf="signupForm.get('username')?.errors?.['maxlength']">Username must be at most 20 characters</div>
+          </div>
+        </div>
+
+        <div class="form-control">
+          <label for="email" class="label text-black">
+            <span class="label-text">Email</span>
+          </label>
+          <input
+            type="email"
+            formControlName="email"
+            class="input input-bordered border-black bg-white text-black w-full px-3 py-2 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="Enter your email"
+          />
+          <div *ngIf="signupForm.get('email')?.touched && signupForm.get('email')?.invalid" class="text-red-500 text-xs italic mt-1">
+            <div *ngIf="signupForm.get('email')?.errors?.['required']">Email is required</div>
+            <div *ngIf="signupForm.get('email')?.errors?.['email']">Email must be a valid email address</div>
+          </div>
+        </div>
+
+        <div class="form-control">
+          <label for="password" class="label text-black">
+            <span class="label-text">Password</span>
+          </label>
+          <input
+            type="password"
+            formControlName="password"
+            class="input input-bordered border-black bg-white text-black w-full px-3 py-2 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="Enter your password"
+          />
+          <div *ngIf="signupForm.get('password')?.touched && signupForm.get('password')?.invalid" class="text-red-500 text-xs italic mt-1">
+            <div *ngIf="signupForm.get('password')?.errors?.['required']">Password is required</div>
+            <div *ngIf="signupForm.get('password')?.errors?.['minlength']">Password must be at least 6 characters</div>
+          </div>
+        </div>
+
+        <div class="form-control">
+          <label for="confirmPassword" class="label text-black">
+            <span class="label-text">Confirm Password</span>
+          </label>
+          <input
+            type="password"
+            formControlName="confirmPassword"
+            class="input input-bordered border-black bg-white text-black w-full px-3 py-2 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="Confirm your password"
+          />
+          <div *ngIf="signupForm.get('confirmPassword')?.touched && signupForm.get('confirmPassword')?.invalid" class="text-red-500 text-xs italic mt-1">
+            <div *ngIf="signupForm.get('confirmPassword')?.errors?.['required']">Confirm Password is required</div>
+            <div *ngIf="signupForm.get('confirmPassword')?.errors?.['matching']">Passwords must match</div>
+          </div>
+        </div>
+
+        <div class="form-control mt-4 flex justify-center">
+          <button (click)="onSubmit()" class="btnS" style="background-color: #0096C7; color: white; border: 2px solid transparent; text-align: center;" [disabled]="signupForm.invalid">Submit</button>
+        </div>
+
+        <div class="alert alert-warning text-center" *ngIf="isSignUpFailed">
+          Add Employee failed!<br />{{ errorMessage }}
+        </div>
+      </form>
+
+      <div class="alert alert-success text-center" *ngIf="isSuccessful">
+        Employee Added successfully! <span style="margin-left: 5px;">&#10004;</span>
+      </div>
+    </div>
+  </div>
+</div>

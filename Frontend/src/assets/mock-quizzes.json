@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1,
+        "title": "Phishing Awareness Quiz",
+        "description": "A quiz to test your knowledge about phishing scams and how to avoid them.",
+        "questions": [
+            {
+                "id": 1,
+                "text": "You receive an email from what appears to be your bank, informing you to click on a link to verify your account details. What should you do?",
+                "options": [
+                    { "id": 1, "text": "Ignore", "isCorrect": true },
+                    { "id": 2, "text": "Click", "isCorrect": false },
+                    { "id": 3, "text": "Contact", "isCorrect": false },
+                    { "id": 4, "text": "Forward", "isCorrect": false }
+                ]
+            },
+            {
+                "id": 2,
+                "text": "You get an email claiming you've won a prize and need to provide your personal information to claim it. What should you do?",
+                "options": [
+                    { "id": 1, "text": "Provide", "isCorrect": false },
+                    { "id": 2, "text": "Delete", "isCorrect": true },
+                    { "id": 3, "text": "Reply", "isCorrect": false },
+                    { "id": 4, "text": "Forward", "isCorrect": false }
+                ]
+            },
+            {
+                "id": 3,
+                "text": "Which of the following is a red flag indicating a phishing email?",
+                "options": [
+                    { "id": 1, "text": "Generic", "isCorrect": true },
+                    { "id": 2, "text": "Recognized", "isCorrect": false },
+                    { "id": 3, "text": "Legitimate", "isCorrect": false },
+                    { "id": 4, "text": "Signature", "isCorrect": false }
+                ]
+            }
+        ]
+    }
+]

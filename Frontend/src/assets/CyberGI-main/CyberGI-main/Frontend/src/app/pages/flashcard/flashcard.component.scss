@@ -1,0 +1,59 @@
+.flashcard {
+    width: 320px;
+    height: 240px;
+    perspective: 1200px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.flashcard:hover {
+    transform: scale(1.05);
+}
+
+.flashcard-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.flipped {
+    transform: rotateY(180deg);
+}
+
+.flashcard-front, .flashcard-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.flashcard-front {
+    background: linear-gradient(135deg, #fbc2eb, #a6c0fe);
+    border: 2px solid #d1b1f2;
+    color: #333;
+    font-size: 1.5em;
+    font-weight: bold;
+    transform: rotateY(0deg);
+}
+
+.flashcard-back {
+    background: linear-gradient(135deg, #f9f9f9, #d0e0f0);
+    border: 2px solid #c1d3f5;
+    color: #555;
+    font-size: 1.2em;
+    transform: rotateY(180deg);
+    padding: 20px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,38 @@
+<div *ngIf="!question; else showQuestion" class="text-center">
+  Loading...
+</div>
+
+<ng-template #showQuestion>
+  <div *ngIf="!isGameOver; else gameOver" class="flex items-center justify-center h-full bg-cover bg-center" style="background-image: url('../../assets/images/blue-yell.jpg');">
+    <div class="grid grid-cols-2 gap-4 p-4">
+      <!-- Iterate over the options array instead of question?.options -->
+      <div *ngFor="let option of options" id="card-one"
+           class="bg-white shadow-md rounded-lg p-4 text-center flex items-center justify-center"
+           style="width: 100px; height: 100px;">
+        <button (click)="selectAnswer(option)" class="w-full h-full flex items-center justify-center" aria-label="Select option">
+          {{ option.optionText }}
+        </button>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<!-- Modal for Game Over -->
+<div *ngIf="showModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
+  <div class="bg-white p-8 rounded-lg shadow-md max-w-xs w-full text-center">
+    <h2 class="text-2xl font-bold mb-4">Game Over!</h2>
+    <p class="text-lg">Your Score: {{ percentageScore | number:'1.0-2' }}%</p> <!-- Displaying percentage score -->
+    <div class="mt-4">
+      <button (click)="restartGame()" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 mr-2">Restart</button>
+      <button (click)="goHome()" class="bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-700">Home</button>
+    </div>
+  </div>
+</div>
+
+<ng-template #gameOver>
+  <div class="flex items-center justify-center h-full bg-cover bg-center">
+    <div class="bg-red-500 text-white shadow-md rounded-lg p-4 text-center max-w-sm w-full">
+      <p class="text-lg font-bold">Game Over!</p>
+    </div>
+  </div>
+</ng-template>
